@@ -5,11 +5,11 @@ from dash import dcc
 from dash.dependencies import Input, Output
 import matplotlib.pyplot as plt
 
-df=pd.read_excel(r'C:\Users\archd\Desktop\KEA\my_shop_data.xlsx')
-df_c = pd.read_excel(r'C:\Users\archd\Desktop\KEA\my_shop_data.xlsx', sheet_name="customers")
-df_o = pd.read_excel(r'C:\Users\archd\Desktop\KEA\my_shop_data.xlsx', sheet_name="order")
-df_e = pd.read_excel(r'C:\Users\archd\Desktop\KEA\my_shop_data.xlsx', sheet_name="employee")
-df_p = pd.read_excel(r'C:\Users\archd\Desktop\KEA\my_shop_data.xlsx', sheet_name="products")
+githubpath = './data/'
+df_c = pd.read_excel(githubpath + 'my_shop_data.xlsx', sheet_name="customers")
+df_o = pd.read_excel(githubpath + 'my_shop_data.xlsx', sheet_name="order")
+df_e = pd.read_excel(githubpath + 'my_shop_data.xlsx', sheet_name="employee")
+df_p = pd.read_excel(githubpath + 'my_shop_data.xlsx', sheet_name="products")
 
 df_e['emp_name']=df_e['firstname'] + ' ' + df_e['lastname']
 # df_p['productname']=df_p['productname']
