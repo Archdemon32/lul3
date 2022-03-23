@@ -47,7 +47,8 @@ def generate_chart(employee_id, Sales):
     fig = px.pie(df, values=values, names=names, hole=.3)
     return fig
 
-app.run_server(debug=True)
+if __name__ == '__main__':
+    app.run_server(debug=True)
 # salesprod={}
 # for i in range(1,21):
 #     salesprod[i]=df_o.loc[df_o['product_id']==i]['Sales'].sum()
